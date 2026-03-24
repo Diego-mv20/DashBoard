@@ -1,35 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
     <link rel="stylesheet" href="style.css">
-    <title>DashBoard</title>
 </head>
 <body>
-    <div class="Container">
-        <aside class="sidebar">
-            <h2>Menu</h2>
 
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <span class="logo-icon">⚡</span>
+            <h2>DataPanel</h2>
+        </div>
+
+        <nav class="menu">
+            <p>General</p>
             <ul>
-                <li>Inicio</li>
-                <li>Ventas</li>
-                <li>Usuarios</li>
+                <li class="activo">🏠 Overview</li>
+                <li>📊 Analytics</li>
+                <li>🧾 Reports</li>
             </ul>
-        </aside>
 
-        <main class="main">
-           <header class="header">
-            <button id="toggle">+</button>
-            <h1>Panel</h1>
+            <p>Cuenta</p>
+            <ul>
+                <li>👤 Usuarios</li>
+                <li>⚙️ Ajustes</li>
+            </ul>
+        </nav>
 
-            <section class="cards">
-                <div class="cards">Card 1</div>
-                <div class="cards">Card 2</div>
-                <div class="cards">Card 3</div>
-            </section>
-           </header> 
-        </main>
-    </div>
+        <div class="upgrade">
+            <p>Mejora tu sistema</p>
+            <button>Upgrade</button>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <!-- HEADER -->
+        <header class="header">
+            <div class="left">
+                <h1>Dashboard</h1>
+                <span>Resumen general</span>
+            </div>
+
+            <div class="right">
+                <input type="text" placeholder="Buscar..." />
+                <button class="btn-gradiente">+ Nuevo</button>
+            </div>
+        </header>
+
+
+        <!-- CARDS -->
+        <section class="cards">
+
+            <div class="card card-blue">
+                <div>
+                    <p>Ingresos</p>
+                    <h2>$12,400</h2>
+                </div>
+                <span>💰</span>
+            </div>
+
+            <div class="card card-purple">
+                <div>
+                    <p>Usuarios</p>
+                    <h2>1,240</h2>
+                </div>
+                <span>👥</span>
+            </div>
+
+            <div class="card card-green">
+                <div>
+                    <p>Crecimiento</p>
+                    <h2>+18%</h2>
+                </div>
+                <span>📈</span>
+            </div>
+
+            <div class="card card-orange">
+                <div>
+                    <p>Ventas</p>
+                    <h2>320</h2>
+                </div>
+                <span>🛒</span>
+            </div>
+
+        </section>
+
+
+        <!-- PANEL -->
+        <section class="panel">
+
+            <div class="grafica">
+                <h3>Actividad</h3>
+
+                <div class="barras">
+                    <div style="height:40%"></div>
+                    <div style="height:70%"></div>
+                    <div style="height:55%"></div>
+                    <div style="height:80%"></div>
+                    <div style="height:60%"></div>
+                    <div style="height:90%"></div>
+                </div>
+            </div>
+
+            <div class="resumen">
+                <h3>Estado</h3>
+
+                <div class="item">🟢 Sistema estable</div>
+                <div class="item">🔵 Nuevo usuario</div>
+                <div class="item">🟣 Pago recibido</div>
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
 </body>
 </html>
