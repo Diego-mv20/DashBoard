@@ -1,81 +1,224 @@
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: Arial, sans-serif;
 }
 
+/* BODY */
 body {
-    background: #0f172a;
+    background: #0b0f1a;
     color: #fff;
 }
 
-.Container {
+/* ===== LAYOUT ===== */
+.dashboard {
     display: flex;
     height: 100vh;
 }
 
+/* ===== SIDEBAR ===== */
 .sidebar {
     width: 200px;
-    background: #020617;
-    padding: 20px;
-    transition: 0.3s;
+    background: #070b14;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid #1e293b;
 }
 
-.sidebar ul {
-    list-style: none;
-    margin-top: 20px;
-}
-
-.sidebar li {
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 6px;
-}
-
-.sidebar li:hover {
-    background: #1e293b;
-}
-
-.main {
-    flex: 1;
-    padding: 20px;
-}
-
-.header {
+/* LOGO */
+.logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
+    font-size: 14px;
 }
 
-.header button {
-    background: #38bdf8;
-    border: none;
-    padding: 8px 12px;
+.logo-icon {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    padding: 6px;
+    border-radius: 6px;
+}
+
+/* MENU */
+.menu p {
+    margin: 15px 0 8px;
+    font-size: 11px;
+    color: #94a3b8;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu li {
+    padding: 8px;
     border-radius: 6px;
     cursor: pointer;
-}
-
-.cards {
-    display: flex;
-    gap: 10px;
-    margin-top: 30px;
-}
-
-.card {
-    flex: 1;
-    background:#1e293b;
-    padding: 20px;
-    border-radius: 10px;
+    font-size: 13px;
     transition: 0.2s;
 }
 
-.card:hover{
-    transform: translateY(-5px);
-    background: #394960;
+.menu li:hover {
+    background: #1e293b;
 }
 
-.hidden{
-    width: 0;
-    overflow: hidden;
+.menu .activo {
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    color: #000;
+    box-shadow: 0 0 10px rgba(59,130,246,0.5);
+}
+
+/* BOTÓN SIDEBAR */
+.upgrade button {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    background: linear-gradient(90deg, #ec4899, #8b5cf6);
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(236,72,153,0.4);
+}
+
+/* ===== MAIN ===== */
+.main {
+    flex: 1;
+    padding: 15px;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.header h1 {
+    font-size: 20px;
+}
+
+.header span {
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+.header input {
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: none;
+    background: #1e293b;
+    color: #fff;
+    font-size: 12px;
+}
+
+.btn-gradiente {
+    background: linear-gradient(90deg, #22c55e, #06b6d4);
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    margin-left: 8px;
+    cursor: pointer;
+    color: #000;
+    font-size: 12px;
+    box-shadow: 0 0 8px rgba(6,182,212,0.5);
+}
+
+/* ===== CARDS ===== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.card {
+    padding: 12px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    background: #111827;
+    transition: 0.2s;
+    font-size: 13px;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+.card h2 {
+    font-size: 18px;
+}
+
+/* COLORES DIFERENTES */
+.card-blue {
+    box-shadow: 0 0 10px rgba(59,130,246,0.4);
+}
+
+.card-purple {
+    box-shadow: 0 0 10px rgba(139,92,246,0.4);
+}
+
+.card-green {
+    box-shadow: 0 0 10px rgba(34,197,94,0.4);
+}
+
+.card-orange {
+    box-shadow: 0 0 10px rgba(249,115,22,0.4);
+}
+
+/* ===== PANEL ===== */
+.panel {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+/* GRAFICA */
+.grafica {
+    background: #111827;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.barras {
+    display: flex;
+    gap: 8px;
+    align-items: flex-end;
+    height: 120px;
+    margin-top: 10px;
+}
+
+.barras div {
+    flex: 1;
+    border-radius: 4px;
+    background: linear-gradient(180deg, #3b82f6, #8b5cf6);
+}
+
+/* RESUMEN */
+.resumen {
+    background: #111827;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.item {
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .panel {
+        grid-template-columns: 1fr;
+    }
 }
